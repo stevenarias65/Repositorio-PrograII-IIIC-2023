@@ -111,16 +111,16 @@
                 <tbody>
 
                     <% while (rs.next()) {%>
-                    <tr>
-                <th scope="row"> <%=rs.getInt("idUsuarios")%> </th>
-                <td><%=rs.getString("userName")%></td>
-                <td><%=rs.getString("name")%></td>
-                <td><%=rs.getString("email")%></td>
-                <td><%=rs.getInt("age")%></td>
-                <td><%=rs.getString("gender")%></td>
-                <td><%=rs.getInt("idRoles")%></td>
-                </tr>
-                <%}%>
+                    <tr onclick="window.location.href='loadUser.jsp?Id=<%=rs.getInt("idUsuarios")%>'">
+                        <th scope="row"> <%=rs.getInt("idUsuarios")%> </th>
+                        <td><%=rs.getString("userName")%></td>
+                        <td><%=rs.getString("name")%></td>
+                        <td><%=rs.getString("email")%></td>
+                        <td><%=rs.getInt("age")%></td>
+                        <td><%=rs.getString("gender")%></td>
+                        <td><%=rs.getInt("idRoles")%></td>
+                    </tr>
+                    <%}%>
                 </tbody>
             </table>  
         </div>
